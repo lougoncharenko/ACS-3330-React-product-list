@@ -1,13 +1,10 @@
 import './App.css';
-import { namesAndCategories, data } from './data/data';
+import { namesAndCategories} from './data/data';
 import Button from './compnents/button/button';
+import ProductContainer from './compnents/productContainer/productContainer';
 
 
 function App() {
-  const allCategories = data.map(obj => obj.category)
-const categorieSet = new Set(allCategories) 
-const categoriesUnique = Array.from(categorieSet)
-console.log(categoriesUnique)
   return (
     <div className="App">
       {namesAndCategories.map(categoryObj => (
@@ -16,6 +13,7 @@ console.log(categoriesUnique)
         count={categoryObj.count}
         />
       ))}
+      <ProductContainer/>
 
     </div>
   );
