@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Button = ({ title, count }) => {
+const Button = ({ category, count, setCategory }) => {
     const buttonStyle = {
         backgroundColor: 'blue', 
         color: 'white',          
@@ -17,8 +17,10 @@ const Button = ({ title, count }) => {
       }
     
   return (
-    <button style={buttonStyle}>
-      {title} 
+    <button style={buttonStyle}
+    onClick={() => setCategory(category)}
+    >
+      {category} 
       <span style={circleButtonStyle}> 
         {count}
       </span>
