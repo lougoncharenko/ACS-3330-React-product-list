@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './App.css';
-import { namesAndCategories} from './data/data';
-import Button from './compnents/button/button';
+import ButtonContainer from './compnents/buttonContainer/buttonContainer';
 import ProductContainer from './compnents/productContainer/productContainer';
 
 
@@ -10,16 +9,9 @@ function App() {
   console.log(category)
   return (
     <div className="App">
-      {namesAndCategories.map(categoryObj => (
-        <Button 
-        category={categoryObj.category} 
-        count={categoryObj.count}
-        setCategory={setCategory}
-        />
-      ))}
+      <ButtonContainer setCategory={setCategory}/>
       <ProductContainer 
       filteredCategory={category}/>
-
     </div>
   );
 }

@@ -8,6 +8,7 @@ const ProductCard = ({ name, category, price }) => {
     padding: '16px',
     marginBottom: '16px',
     boxShadow: '0 0 5px rgba(0, 0, 0, 0.1)',
+    margin: '50px'
   };
 
   const titleStyle = {
